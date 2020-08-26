@@ -3,8 +3,16 @@ package com.cmps312.lab2_kotlinfundamentals
 fun main(args: Array<String>) {
 
     var names = arrayListOf("Abdulahi" , "Mohamed", "Sara", "Fatema")
-     names.add("Ghalia")
-    
+    names.add("Ghalia")
+    names.forEach {name ->println(name)}
+
+    var mappedNames = names.map {name -> "$name - ${name.length}"}
+
+    mappedNames.forEach { println(it) }
+
+    val combined = names.reduce { acc, s -> "$acc**$s" }
+
+    println(combined)
 
 }
 
